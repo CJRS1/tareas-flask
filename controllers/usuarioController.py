@@ -7,8 +7,6 @@ class UsuarioController(Resource):
     def get(self):
 
         usuarios=conexion.session.query(UsuarioModel).all()
-        print(usuarios)
-        print(usuarios[0].nombre)
 
         serializador=UsuarioRequestDto(many=True)
 
